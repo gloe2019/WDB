@@ -1,0 +1,25 @@
+What is CSS?
+    CSS allows us to style and layout HTML elements on a page
+    - language used to describe the visual representation/apperance of an HTML document
+    CSS = Cascading Style Sheets
+
+CSS Rules
+    Basic pattern
+        selector {
+            property: value;
+        }
+    ex: make all h1 elements purple:
+    h1 {
+        color: purple;
+    }
+    ex: make all img elements 100px wide, 200px tall
+    img {
+        width: 100px;
+        height: 200px;
+    }
+    ex: select every other text input and give it a red border 
+    input[type="text"]:nth-of-type(2n) {
+        border: 2px solid red;
+    }
+
+CSS can be intimidating because of how many properties we can manipulate! Don't Panic!
