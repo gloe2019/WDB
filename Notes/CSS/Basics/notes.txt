@@ -23,3 +23,42 @@ CSS Rules
     }
 
 CSS can be intimidating because of how many properties we can manipulate! Don't Panic!
+
+Including Styles Correctly
+- There are three ways to include styles in your HTML documents, however only one way is acceptable!
+    Wrong ways:
+    - Inline Styles --> writing your styles directly inline on each element. No bueno!
+    - The <style> element -> writing CSS inside a <style> element nested in <head>. Nah G...
+    The Right Way:
+    - External Stylesheet --> writing your CSS in a .css file and including the stylesheet using a <link> in the head of your HTML doc.
+
+
+Common CSS Properties
+    Color
+    - set the  text color 
+    Background-color
+    - set background color of and element
+    Background
+    - Note: this is more powerful, and has more options than background-color
+
+CSS Colors
+    - Modern browsers support 140 named colors -> ref: https://htmlcolorcodes.com/color-names
+    - Using named colors are pretty limited as a typical computer can display ~16m colors... We can use color systems to target more colors.
+        RGB Model
+        - additive color system - a color can be made from combinations of red, green and blue. Each channel ranges from 0 - 255
+        - ex:   rgb(255, 0, 0) - pure red
+                rgb(0, 0, 255) - pure blue
+                rgb(0, 0, 0) - black
+        
+        Hex 
+        - still red green and blue channels from 0-255, however they are represented with hexadecimal numbers.
+        - 6 numbers consisting of 3 pairs. 1st pair = red, 2nd pair = green, 3rd pair = blue
+        ex: #0f5679
+
+CSS Text Properties
+    - text-align: set the horizontal alignment of text within a block element. Values: left, right, center, justify...
+    - font-weight: control the boldness/lightness of text within an element. values: normal, bold, lighter, bolder, 400(normal), 700(bold)--> based on font properties
+    - text-decoration: set the apperance of decorative lines on text.
+    Values: underline, dotted, dashed, overline, etc.
+    - line-height: sets the height of a line box -> for double/single-spacing...
+    - letter-spacing: control spacing between individual letters
