@@ -1,0 +1,14 @@
+h2 {
+	color: rgb(255, 200, 200);
+	background-color: #5fcffc;
+}
+
+button {
+	color: blue;
+	background-color: grey;
+}
+
+p {
+	color: salmon;
+	background-color: bisque;
+}
