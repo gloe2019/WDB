@@ -1,0 +1,8 @@
+Intro to HTML
+
+- HTML = content + structure of page 
+- HTML is a markup language. You annotate/add content to documents
+- To write HTML, we pick from a set of defined/standardized elements. Elements are created by writing tags, and most elements consist of an opening and a closing tag
+    ex: 
+    Opening tag --> <p>I am a paragraph</p> <-- Closing tag
+    

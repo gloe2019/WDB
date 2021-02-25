@@ -1,0 +1,10 @@
+Crucial:
+	- paragraph elements, headings, lists, anchor tags, images
+    - *HTML Boilerplate*    
+
+Important:
+	- Using MDN as a resource
+    - Dev Tools -> Inspector
+
+Nice to have/Optional: 
+	- VS Code Format on Save

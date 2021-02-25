@@ -1,0 +1,31 @@
+Section Notes
+What is the Internet?
+	It is the infrastructure that carries services like email, the web, files sharing, gaming, streaming services, etc.
+	It is a global network of connected devices (desktops, Laptops, Game consoles, Refridgerators, etc)
+	The Internet = global network of interconnected computers that communicate via TCP/IP. It is a network of networks.
+How do these computers communicate?
+	- Computers have IP addresses on subnets, and routers connect different networks together,
+	- The Internet is a global network of networks... Routing protocols help form this network of networks.
+	
+The Web
+The Web (World Wide Web) is an information system where documents and other resources are available over the Internet. 
+Documents are transferred via HTTP. 
+HTTP is a protocol that dictates how communication over the Web works.
+	- When you type in a URL on your browser, you're generating a REQUEST, asking for the resource at that URL/server
+	- Your browser receives a RESPONSE from the web server and displays it as a website. 
+	- Web Servers satisfy web requests - can receive REQUESTS and send RESPONSES...
+	Note: Client = the machine making a request to the server. 
+
+The HTTP Request/Response Cycle
+- Once a REQUEST is sent to a web server, the server responds with instructions (with code) that the browser understands and then renders for human eyes. 
+- Page source = page content/instructions that the browser receives from the server. The browser renders the source code into viewable content. Source code = HTML, CSS, & Js
+
+Frontend vs Backend Development
+Frontend - focuses on code that runs in the browser -> HTML, CSS, Js = frontend code
+Backend - server-side work done to construct HTTP RESPONSE messages to the Client. Focus is on the server -> Java, C#, Ruby, etc = backend code
+
+What do HTML, CSS, and Js do?
+These three technologies are the only language the browser understands.
+HTML - describes page content.
+CSS - helps define/describe HTML elements, and style the page
+JS - makes page content actually responsive/interactive. Js is essential for adding functionality to web apps. 

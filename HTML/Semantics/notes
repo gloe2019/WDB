@@ -1,0 +1,33 @@
+What exactly is HTML5?
+- HTML5 is a new version of the HTML language, ang a larger set of technologies that allows building more diverse websites and applications
+- Includes a lot of stuff that is not strictly HTML
+- HTML is a standard - it's a set of istructions that defines how HTML should work.
+- htmlspec.whatwg.org --> document that details how HTML should work. Brosers implement that document...
+- DOCTYPE tags indicates to the browser that the document uses the latest  HTML (HTML5)
+
+Inline vs Block Elements
+- Inline elements fit alongside other elements
+    - ex: a, img, span
+- Block elements take up a whole block of space
+    - ex: p, h1, div
+
+Div vs span
+- <div> - generic container to hold content/group elements together. Divs are block level by default.
+- <span> - generic inline container thatis mainly be used to target and style content inline. 
+
+<hr> = horizontal rule
+- horizontal linebreak that separates elements
+
+<br> = line break element...
+USeful for writing poems/address where division of lines is important...
+
+<sub> = subscript element
+- designate inline text to be displayed as a subscript. 
+<sup> = superscript element
+- designate inline text to be displayed as a superscript
+
+HTML Entities
+- Start with an ampersand and end with a semicolon
+- use dto display reserced characters that would normally be invalid.
+- The browser interprets them and renders the correct character
+- Reference: https://dev.w3.org/html5/html-author/charref
