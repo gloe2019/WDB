@@ -1,0 +1,14 @@
+Crucial:
+- Table basics - <table>, <tr>, <td>, <th>
+- Form Element basics
+- Button elements
+- Labels
+- Common Input Types
+
+Important:
+- Table Sections - <thead>, <tfoot>, <tbody>
+- Range & Text areas
+- Form Validations
+
+Nice To Have:
+- Table Colspan & Rowspan

@@ -1,0 +1,18 @@
+Unit Goals:
+- Create well-formatted HTML tables
+- Understand when and when not to use tables
+- Explain the role of the form element
+- Utilize a variety of form controls
+- Define complex HTML forms
+- Add HTML5 Form Validations
+- Ensure accessibiliuty of our forms
+
+HTML tables
+- Tables are structured sets of data, made up of rows and columnns
+- In the early days of the web, tables were used to create page layouts. But today, you should only use the table element to create actual data tables!
+- There are multiple elements that go into creating a table! -> Demo file=heaviest_birds.html
+
+HTML forms
+The <form> element is just a shell/container that doesn't have any visual impact. We fill the form with a collection of inputs, boxes, etc.
+- The form element represents a document section containing interactive controls for submitting information.
+- The action attribute specifies WHERE the form data should be sent
