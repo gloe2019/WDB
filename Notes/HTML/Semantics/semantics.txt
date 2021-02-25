@@ -1,0 +1,42 @@
+Semantic Elements
+Instead of Divs, use more specific elements like:
+<section>, <article>, <nav>, <main>, <header>, 
+<footer>, <aside>, <summary>, <details>-->
+
+<main>
+The <main> element represents the dominant content of the body of a document. Main content of page, and should exclude content that is replicated across a set of documents - ex: nav bar, search, sidebar.
+</main>
+
+<nav>
+This represents anything on the page that provides navigation links. Could be internal or external links.
+</nav>
+
+<section>
+This represents a standalone section of a document. It's generic, but can be useful for sorting/breaking up content on a page. 
+</section>
+
+<article>
+This represents a self-contained composition in a document. Ex: forum post, magazine/newspaper article, blog entry, or anything that could be independently distibutable/reusable.
+</article>
+
+<aside>
+Portion of a documents whose content is indirectly related to the document's main content. Frequently used as callout boxes/sidebars
+</aside>
+
+<header>
+Represents introductory content, often includes navigation content, logos, and search/buttons. You can have multiple header/footer elements on a page...
+</header>
+
+<footer>
+Represents a footer, which typically contains information about the author of the section, copyright data, or links to related documents. 
+</footer>
+
+<time>
+Represents a specific period in time. used to translate dates into machine-readable format, allowing for better search engine results/custom features like reminders...
+Neet to specify the datetime attribute.
+</time>
+
+<figure>
+Self-contained content typically with a caption (<figcaption>Optional</figcaption>). Figure, caption and contents are referenced as a single unit.
+Usually an illustration/diagram
+</figure>
