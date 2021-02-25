@@ -13,6 +13,12 @@ HTML tables
 - There are multiple elements that go into creating a table! -> Demo file=heaviest_birds.html
 
 HTML forms
-The <form> element is just a shell/container that doesn't have any visual impact. We fill the form with a collection of inputs, boxes, etc.
+- The <form> element is just a shell/container that doesn't have any visual impact. We fill the form with a collection of inputs, boxes, etc.
 - The form element represents a document section containing interactive controls for submitting information.
-- The action attribute specifies WHERE the form data should be sent
+- The action attribute specifies WHERE the form data should be sent when the form is submitted
+- The method attribute specifies which HTTP method should be used
+    <Label>
+    - <Label> represents a caption for an item 
+    - labels are associated with the input element... super helpful for screen readers, and also makes the label clickable...
+    - need to specify labels for your inputs...
+    - use two attributes - id (on the input), and for (on the label). The values of these attributes must be identical.
