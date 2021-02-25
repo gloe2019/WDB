@@ -32,3 +32,6 @@ HTML forms
     The 'name' attribute
     - the value of the name attribute is paired with the input from the form...
     - when data is sent/submitted, it is labelled under/with the name for the server.
+
+    Checkbox
+    type="checkbox"

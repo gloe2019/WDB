@@ -55,6 +55,31 @@
         <input type="text" name="search_query" placeholder="Enter search term">
         <button>Search YouTube!</button>
     </form>
+    <hr>
+    <h2>Radio Buttons, Checkboxes, &amp; Selects</h2>
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">I aggree to everything</label>
+        <p>
+            <!-- Radio button demo -->
+            <label for="xs">XS</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <p>
+            <label for="meal">Please select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="">--Choose an entree--</option>
+                <option value="fish">Fish</option>
+                <option value="steak">Steak</option>
+                <option value="veg">Vegetarian</option>
+            </select>
+        </p>
+        <button>Submit</button>
+    </form>
 </body>
 
 </html>
