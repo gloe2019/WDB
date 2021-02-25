@@ -31,3 +31,10 @@ HTML Entities
 - use dto display reserced characters that would normally be invalid.
 - The browser interprets them and renders the correct character
 - Reference: https://dev.w3.org/html5/html-author/charref
+
+Semantic Markup
+- Semantic markup = meaningful markup, or markup that pertains to the meaning of the content of an element
+Elements: header, footer, nav, aside, main, section, article
+- Semantic markup is super useful for SEO - semantic markup is friendly to web crawlers, and usually results in higher search rankings
+- Screen readers use semantic markup to help visually impaired users to navigate a page. Super useful for accessibility!
+- Semantic markup makes code easier to understand to developers and yourself.
