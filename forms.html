@@ -13,17 +13,47 @@
     <form action="/tacos">
         <p>
             <label for="username">Enter a username:</label>
-            <input id="username" type="text" placeholder="Username">
+            <input id="username" type="text" placeholder="Username" name="username">
         </p>
         <p>
             <label for="password">Enter a password:</label>
-            <input id="password" type="password" placeholder="Password">
+            <input id="password" type="password" placeholder="Password" name="password">
         </p>
         <p>
-            <label for=""></label>
+            <label for="color">Pick a Color:</label>
+            <input id="color" type="color" name="color">
         </p>
-        <input type="color">
-        <input type="number" placeholder="Enter a number">
+        <p>
+            <!--Alternative way to label an input (less common)-->
+            <label>
+                Enter a number:
+                <input type="number" placeholder="Enter a number" name="num">
+        </p>
+        <!--This button doesn't submit the form b/c of the type attribute-->
+        <button type="button">Regular button</button>
+        <!--This button submits the form-->
+        <button>Submit!</button>
+        <!--So does this one~~-->
+        <input type="submit" value="Click to Submit">
+    </form>
+    <hr>
+    <!--Outside a form, this button has no default behaviour-->
+    <button>Outside Form</button>
+    <h2>Hijack Common Search Servers</h2>
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search/">
+        <input type="text" name="q" placeholder="Enter search term">
+        <button>Search Reddit!</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https:/google.com/search">
+        <input type="text" name="q" placeholder="Enter search term">
+        <button>Seach Google!</button>
+    </form>
+    <h3>Search YouTube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query" placeholder="Enter search term">
+        <button>Search YouTube!</button>
     </form>
 </body>
 
