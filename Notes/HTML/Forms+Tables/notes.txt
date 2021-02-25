@@ -17,6 +17,7 @@ HTML forms
 - The form element represents a document section containing interactive controls for submitting information.
 - The action attribute specifies WHERE the form data should be sent when the form is submitted
 - The method attribute specifies which HTTP method should be used
+<Input>
     <Label>
     - <Label> represents a caption for an item 
     - labels are associated with the input element... super helpful for screen readers, and also makes the label clickable...
@@ -35,3 +36,30 @@ HTML forms
 
     Checkbox
     type="checkbox"
+
+    Range type
+    - lets the user specify a numeric value on a sliding range - you must designmate min and max values
+    key attributes:
+        -min, max, step, value *note: these attributes can be applied to the number input type*
+
+<Textarea> (not an input!)
+- Element allows user to write a sizeable amount of text.
+
+Form Validations
+- Adding constraints (ex: password complexity) or validating user input/data before allowing form submission
+- There are built-in browser validations we can apply to our forms. 
+- There are two types of validation:    
+    - Client-side validation --> done in browser as user is inputting data into fields...
+    - Server-side validation --> done on the server after submission to ensure data meets certain expectations...
+
+    Attributes:
+    - required -> This indicates that the user must specify a value for the input before the form can be submitted. 
+    - minlength, maxlength -> for strings/characters
+    - min, max -> for numeric values
+    - pattern -> specifies a regular expression the form's control value should match
+        regex is madness... you can set your own regex using the pattern attribute..
+            ex: type="tel" pattern="[0-9]{3} -> only numbers are accepted, and must specify 3 of them...
+        - you can use elements that already have pattern matching by default...
+            ex: type="email" - requires an '@' sign...
+                type="url" - pattern: urlscheme://restofurl
+                
