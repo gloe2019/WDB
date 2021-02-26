@@ -3,6 +3,8 @@ h1 {
 	font-weight: normal;
 	text-decoration: #00a2ff wavy overline;
 	letter-spacing: 10px;
+	font-size: 70px;
+	font-family: monospace;
 }
 
 p {

@@ -62,3 +62,11 @@ CSS Text Properties
     Values: underline, dotted, dashed, overline, etc.
     - line-height: sets the height of a line box -> for double/single-spacing...
     - letter-spacing: control spacing between individual letters
+    - font-size: sets the font-size. 
+        can be specified with absolute or relative sizes...
+        - absolute: px, pt, cm, in, mm
+        Note: px are the most commonly used absolute unit. Though, they're not recommended for responsive websites!
+        - relative: em, rem, vh, vw, %, etc
+    -font-family: used to change element font...
+    There are a few web-safe fonts that are available on all browsers... ref: https://www.cssfontstack.com/
+    
