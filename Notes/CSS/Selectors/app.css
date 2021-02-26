@@ -22,8 +22,22 @@ span {
 }
 .post a {
 	color: #f4a261;
+	font-weight: 700;
+	text-decoration: none;
 }
-
+.post a:hover {
+	text-decoration: underline;
+}
+.post button:hover {
+	background-color: #f7ede2;
+	color: #95190c;
+}
+.post button:active {
+	background-color: #84a59d;
+}
+.post:nth-of-type() {
+	background-color: #edd7bf;
+}
 .tag {
 	background-color: #b2675e;
 	color: #f7ede2;
@@ -37,9 +51,13 @@ footer a {
 h2 + button {
 	background-color: #a4036f;
 	color: #c8c7d1;
-	font-size: 15px;
+	font-size: 12px;
 }
 
 footer > a {
 	color: #e9c46a;
+}
+
+input[type="password"] {
+	color: #905e27;
 }

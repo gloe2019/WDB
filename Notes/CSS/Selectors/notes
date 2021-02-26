@@ -70,3 +70,16 @@ Attribute Selector
             width: 300px;
             color: yellow;
         }
+    
+    Note: You can select one element type with specified class (assuming multiple elementy types have the same class)
+        ex: <section> and <aside> both have the class=post. To select just sections with that class:
+    section.post {
+    }
+    Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+
+Pseudo Classes
+    - these are keywords added onto to the end of a selector that specify a special state of the selected element
+        ex: :hover
+        Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+

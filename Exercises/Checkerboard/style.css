@@ -1,0 +1,26 @@
+/*Checkerboard Exercise
+The index.html file contains 25 <div> elements, each with the class of square. 
+Create a simple checkerboard pattern by making the even squares black and the odd squares red.
+Note: the solution needs to select both the even and odd squares, changing the background color
+of the entier board will work visuallt, but will not pass the exercise parameters.
+*/
+.square {
+	width: 100px;
+	height: 100px;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+
+#board {
+	display: flex;
+	margin: 0 auto;
+	width: 500px;
+	flex-wrap: wrap;
+}
+/*Solution*/
+.square:nth-of-type(2n) {
+	background-color: black;
+}
+.square:nth-of-type(2n + 1) {
+	background-color: red;
+}
