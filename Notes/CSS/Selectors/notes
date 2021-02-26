@@ -1,0 +1,72 @@
+Universal selector
+    - Select everything!
+    * {
+        property: value
+    }
+    ex: make all text black
+        * {
+            color: black;
+        }
+
+Element selector
+    - Select every of a given Element
+    ex: specify the size for every image to be 100px wide and 200px tall
+        img {
+        width: 100px;
+        height: 200px;
+        }
+
+Selector List
+    - Combine multiple selectors in a List
+    ex: select all h1s and h2's
+        h1, h2 {
+            color: magenta;
+        }
+
+ID Selector
+    - Select only the element with the specified ID
+    ex: select the element with id of 'logout'
+        #logout {
+            color: orange;
+            height: 200px;
+        }
+    Note: id's should only be used once on any given page - you must never reuse an id in multiple elements!
+    ID's are meant to be unique identifiers. Use them minimally...
+
+
+Class Selector
+    - Select elements with the specified class
+    ex: select elements with class of 'complete'
+        .complete {
+            color: green;
+        }
+Note: a class can be applied to multiple elements for styling repetitive elements :)
+
+Descendant Selector
+    - Select nested elements...
+    ex: select all <a>'s nested inside an <li>
+        li a {
+            color: teal;
+        }
+
+Adjacent Selector (Combinator)
+    - Select element immediately adjacent to some specified element...
+    ex: select only the paragraghs that come right after an <h1> (not nested)
+        h1 + p {
+            color: red
+        }
+
+Direct-Descendent Selector
+    - Select only elements that are direct children of a specified element
+    ex: select only the <li>'s that are direct children of a <div> element
+        div > li {
+            color: white;
+        }
+
+Attribute Selector
+    - Select  elements having the specified attribute
+    ex: select all input elements where the type attribute is set to "text"
+        input[type="text"] {
+            width: 300px;
+            color: yellow;
+        }
