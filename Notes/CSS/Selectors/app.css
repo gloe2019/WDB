@@ -61,3 +61,11 @@ footer > a {
 input[type="password"] {
 	color: #905e27;
 }
+
+h2::first-letter {
+	font-size: 30px;
+}
+h2::selection {
+	background-color: #f4a261;
+	color: #f7ede2;
+}

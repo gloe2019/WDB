@@ -82,4 +82,16 @@ Pseudo Classes
         ex: :hover
         Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
+Pseudo elements
+    - these are keywords added to a selector that allow you style a particular part of the selected elements
+    ex - ::after, ::before, ::first-letter, ::first-line, ::selection
 
+CSS Cascade
+    - The order your styles are declared in and linked to matters.
+    - If you have 2 stylesheets linked in your <head>, and you've targetted the same selectors in both, the rules in the second sheet (last) are applied.
+    - The last-read rule 'wins'
+
+Specificity
+    -This is how the browser decides which rules to apply in the event of a conflict.
+    - It is a measure of hows specific a given selector is - the more specific selector 'wins'
+    
