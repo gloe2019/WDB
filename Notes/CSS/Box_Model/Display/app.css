@@ -1,0 +1,26 @@
+span {
+	background-color: palevioletred;
+	border: 1px solid black;
+}
+/* spans are diaply:inline; by default 
+In-line elements do not respect width/height declarations - you can't set width/height for inline elements!
+You can't really set padding either - it's not respected by page content.*/
+
+h1 {
+	background-color: palevioletred;
+	border: 1px solid black;
+	width: 300px;
+	padding: 50px;
+	margin: 50px;
+}
+/* block-level elements respect width, height and padding/margin declarations...*/
+
+div {
+	height: 200px;
+	width: 200px;
+	background-color: olive;
+	border: 2px solid black;
+	display: inline-block;
+}
+/*Inline-block level elements bahave like inline elements, however, they also obey width, height, padding& margin declarations */
+/* display: none - to hide elements! */

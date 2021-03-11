@@ -1,0 +1,16 @@
+Absolute Units
+PX- most commonly used absolute unit. 1px does not necessarily equal the width of one pixel. Note: PX is not recommended for responsive websites
+
+Relative Units
+Percentages(%)
+percentages are always relative to some other value
+Sometimes it's a value from the parent and other times it's a value from the element itself
+    ex: width: 50% -> this means the width is 1/2 the width of the parent element
+Note: for some properties, percentages work differently. They are relative to the element itself, rather than the parent.
+    ex: line-height: 50% --> half the font-size of the element itself..
+
+
+Rem - Root Ems
+- These are relative to the root html element's font-size. Easier to work with than ems.
+    If the root font-size is 20px, 1rem=20px, 2rem=40px, etc - ALWAYS.
+    

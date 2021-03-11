@@ -1,0 +1,58 @@
+.app-form {
+	width: 80%;
+	border: 3px solid #040223;
+	padding: 10px;
+	display: block;
+	text-align: end;
+}
+form {
+	font-family: monospace;
+}
+::placeholder {
+	font-family: monospace;
+}
+input[type="text"],
+[type="email"],
+textarea {
+	width: 95%;
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	border-bottom: 2px solid #040223;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+input[type="submit"] {
+	padding: 10px 15px;
+	margin: 10px;
+	display: inline-block;
+	color: #040223;
+	background: none;
+	align-items: center;
+}
+/* .two-col {
+	display: flex;
+	justify-content: center;
+}
+.one_name {
+	padding-right: 20px;
+}
+
+.fullw-col {
+	display: grid;
+	padding-right: 20px;
+	justify-content: center;
+}
+
+.app-form input {
+	width: 100%;
+	flex-grow: 1;
+
+*/
