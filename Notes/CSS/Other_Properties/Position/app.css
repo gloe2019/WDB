@@ -1,0 +1,43 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    margin: 10px;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+p {
+    margin:0;
+    display: inline;
+}
+#middle {
+    background-color: #81b29a;
+}
+
+#static #middle {
+    position: static;
+
+}
+
+#relative #middle {
+    position: relative;
+    top: 50px; /* this offsets the element relative to itself... It does not affect position of other elements.. */
+    left: 50px;
+}
+
+#absolute {
+    position: relative;
+}
+
+#absolute #middle {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+#fixed #middle {
+    position: fixed;
+    top: 0px;
+    left: 400px;
+}

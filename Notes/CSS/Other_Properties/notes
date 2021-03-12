@@ -1,0 +1,32 @@
+Opacity + Alpha Channel
+
+Alpha Channel
+rgba - 3 color channels plus alpha channel, which governs; the transparency of the color --> how see-through it appears.
+the value ranves from 0 to 1, with 0 being transparent and 1 being fully opaque
+
+Opacity is a property that is set on an element - that governs the elements transparency, including it's dependents..
+Opacity affects elements and their descendents/children, while alpha channel settings only apply to the selector element.
+
+
+The Position Property - https://developer.mozilla.org/en-US/docs/Web/CSS/position
+- This property sets how an element is positioned in a document. It determines how to 
+    position: static = default. You cannot set top, right, left, or bottom values for statically positioned elements.
+    position: relative -> element is positioned according to the normal flow of the document, then offset relative to itself based on values specified for top, right, bottom and left. 
+    position: absolute -> The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is now positioned relative to its closest positioned ancestor.
+
+
+Transitions
+- Allows us animate the transition of one property to another
+- you can specify property name, duration (how long you want it to take to transition), timing function and delay
+    property name:
+    .. {
+        transition: background-color 1s; --> the background color takes 1 second to transition to a new state, while other elements transition immediately. 
+        transition: background-color 1s, border-radius 2s; -> you can specify multiple elements by separating them with a comma.
+    }
+
+    delay: 
+    ..{
+        transition: background-color 3s 1s; -> the second value specifies the delay - the amount of time to wait before beginning the transition.
+    }
+
+    timing function:

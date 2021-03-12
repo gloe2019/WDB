@@ -1,0 +1,18 @@
+section  {
+    width: 500px;
+    height: 500px;
+    background-color: slateblue;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 204, 170, 0.725); /* Aplha channel only applies to the div - the text (and any child element) is still black and unaffected. */
+}
+
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.3; /*Opacity affects elements and their descendents/children -- the div box and text(all child elements) are both transparent*/
+}
