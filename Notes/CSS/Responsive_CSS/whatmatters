@@ -1,0 +1,10 @@
+Crucial:
+    - Focus on flexbox concepts, not memorizing propertires. 
+    - flex shorthand
+    - flex-basis, grow and shrink
+    - align-itmes
+    - flex-wrap
+    - align-content and align-self
+    - justify-content
+    - flex-direction
+    - *Media Queries* -- Key for designing responsive websites

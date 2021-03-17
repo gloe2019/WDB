@@ -1,0 +1,61 @@
+Introduction to CSS Flexbox
+    - Flexbox is a new/recent addition to CSS that addresses common layout frustrations and simplifies the process
+    - it's a one-dimensional layout method for laying out items in rows or columns
+    - flexbox allows us to distribute space dynamically across elements of an *unknown* size...
+
+Flex-Direction
+    - turn on flexbos - display: flex on the parent container!
+    The flex model: 
+        - On any container you set as display: flex, there are two axes - main axis (left-to-right by default) and cross axis (top-to-bottom by default)
+        - flex-direction allows us to change the main axis direction on the container.
+            default: flex-direction: row; (left-to-right)
+                        flex-direction: row-reverse; (right-to-left)
+                        flex-direction: column; (top-to-bottom)
+                        flex-direction: column-reverse; (bottom-to-top)
+
+Justify-Content
+    - This determines how the content is distributed across the main axis. Its behavior depends on the main axis (set by flex-direction)
+    Default: justify-content: flex-start;
+                justify-content: flex-end; -- push content to end of main axis...
+                justify-content: center; -- content is centered along main axis
+                justify-content: space-between; -- extra space is distributed between elements, ignoring the start and end.
+                justify-content: space-around;
+                justify-content: space-evenly;
+
+Align-items
+    - This distributes content on the cross axis.
+    Default: align-items: flex-start; -- align along the beginning of the cross axis
+                align-items: flex-end;
+                align-items: center; - combine with justify-content:center; to center content horizontally and vertically!
+                align-items: baseline; - align content to baseline - align text for elements of different sizes...
+
+Align-Content
+    - This also distributes space along the cross axis -- controls space between columns/rows
+    Note - this does nothing if flex: wrap is not turned on!
+
+Align-Self
+    - This is applied to individual child items of a flex container~!
+    - Also works on the cross axis (like align-items and align-content)
+
+Flex-Basis
+    - Dictate the initial size of an item before its placed into a flex container. Applies to individual child items of a flex container
+    - Flex basis might refere to width or height, depending on what the main axis is...
+        ex: flex-direction: column;
+        flex-basis applies to height...
+
+Flex-Grow
+    - Controls trhe amount of space that an element takes up if there is available/extra space
+    - Accepts a unit-less number value, and can be appied to multiple child items for scaling
+
+Flex-Shrink
+    - If items are larger than the container, they shrink according to the rules set by flex-shrink.
+
+Flex Shorthand
+    - Use to set flex-grow, flex-shrink and flex-basis at once. 
+    - Can pass in multiple values:  
+        One Value = flex-grow (unitless number)
+                    flex-basis (width/height units)
+        Two Values: flex-grow  | flex-basis (width units)
+                    flex-grow | flex-shrink
+        
+        Three values: flex-grow | flex-shrink | flex-basis
