@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+
+<body>
+
+
+    <script>
+        let fact = 'I Am King';
+        /* alert(fact.toLowerCase()); note - methods must be appended with () or they will not be executed...*/
+        /*this is a non-destructive string method - the original string is preserved...*/
+        let msg = "Leave me alone plz!"
+        let angryMsg = msg.toUpperCase(); /*this converts the string to all uppercase*/
+        /*alert(angryMsg); */
+
+        let userInput = "   hello, my name is tim tom tammy piing  ";
+        /*alert(userInput.trim()); */
+        let greeting = "      hello again!!!    "
+        let greetMod = greeting.trim().toUpperCase(); /* You can chain string methods! together*/
+        /* alert(greetMod); */
+
+        alert(msg.slice(0, 14) + "!!");
+
+        let word = "skateboard"
+        let facialHair = word.slice(5).replace('o', 'e');
+        alert(facialHair);
+
+        /*String Template Literals */
+        let product = 'Artichoke';
+        let price = 2.25;
+        let qty = 5;
+        /* Create template literal and assign it to the variable - total */
+        let total = `You bought ${qty} ${product}s. Your Total is: $${price * qty}.`
+        alert(total);
+
+    </script>
+</body>
+
+</html>

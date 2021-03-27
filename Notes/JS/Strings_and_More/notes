@@ -1,0 +1,77 @@
+Introducing Strings
+    - String = textual information/ strings of characters
+    - Strings must be wrapped in quotes! Double and single quotes both work, however you must be consistent in your codebase..
+        let firstname = "Ziggy"; -- valid
+        let  msg = 'Please do not feed the chimps!';
+        let bad = "bonk! this is wrong'; -- invalid
+    Note: "23" is different from 23 - one is a string and the other is a number.
+    - "23" + 15 is not technically valid, however JS will concatenate these to be 2315...
+    - To write string sith quote marks, use both:
+        "she said 'I love you'"
+
+Indices & Length
+    - String are indexed - every character has a positional number associated with it. Positional numbers start counting from 0...
+    Ex:     "C H I C K E N"
+    Index:   0 1 2 3 4 5 6 
+    We can access individual characters base don their index value.
+    ex: let animal = "Dumbo Octopus"
+        animal[2] = "m" -- square brackets are used to access string characters by their index number. 
+    - Indices are useful for determining the first/last character in an unknown variable?
+    - Every string has a built-in property of length. Accessed by appending .length to the variable name.
+    ex: animal.length = 13 = length of string/number of characters in string. The highest index however is 12, as indices start from 0.
+    - Strings can be concatenated
+        let firstname = "River"
+        let lastname = "Phoenix"
+        firstname + lastname = "RiverPhoenix"
+
+String Methods
+    - In JS, strings come with a set of built-in actions - called methods. Methods are actions that can be performed on strings. 
+    - Methods can help with things like:
+        - Searching within a string
+        - Replacing part of s tring
+        - Changing the case of a string, etc...
+    - Every string has the exact same set of methods that can be applied to it.
+    - Syntax for string methods: 'thing.method()'
+    Common String methods:
+    - toLowerCase -- converts all string characters to lowercase
+    - toUpperCase -- converts all string characters to uppercase
+    - Trim - trims off any whitespace in a string
+
+String Methods with Arguments
+    - Many methods accept arguments...
+    - Arguments are inputs that can be passed into a method to modify its behaviour.
+    - Syntax: thing.method(arg);
+    Example:
+    indexOf
+        let tvShow = 'catdog';
+
+        tvShow.indexOf('cat'); //0 - cat starts at index 0
+        tvShow.indexOf('dog'); //3 - dog starts at index 3
+        tvShow.indexOf('z'); //-1 - z does not exist in tvShow
+        indexOf - gives the string index -> the positional number where a given argument occurs in the string.
+         --> indexOf returns the FIRST occurence of the specified value (won't give multiple matches...) and returns -1 if the value is not found
+            ex: "haha that is so funny!".indexOf('h') --> 0, will not return 2 or 6 which are subsequent occurences of the letter 'h'.
+        - indexOf is comomnly used to test in a string contains a specified value.
+    slice
+    let str = "supercalifragilisticexpialidocious'
+
+    str.slice(0,5); //'super'
+    str.slice(5); //'califragilisticexpialidocious'
+    slice - extracts/slices a portion of a string and returns it as a new string.
+    - slice can accept one or two numbers. these numbers are the indices we want to slice our string from. they are referred to as the beginIndex and endIndex.
+        Syntax: str.slice(beginIndex[, endIndex]); -- src = https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+        note: the [] surrounding endIndex means it's optional and can be left out...
+
+String Template Literals
+    let product = 'Artichoke';
+    let price = 2.25;
+    let qty = 5;
+    Goal: print out the following message -> You bought (qty) (product)s and your total is (price * qty)
+    The only way to do this currently is:
+    "You bought " + qty + " " + product + "s." + " Total is: " + price * qty 
+    Lot of spaces and extra work... Template literals simplify this process!
+    - Template literals are strings that allow embedded expressions, which will be evaluated and the turned into a new string.
+        Note: you must use the back-tick key ` to specify template literals!
+    Redo w/ template literals:
+    `You bought ${qty} ${product}s. Your Total is: ${price * qty}.` ==> "You bought 5 Artichokes. Your Total is: 11.25."
+        Template literals allow you to embed variables directly inside of a string with minimal hassle!

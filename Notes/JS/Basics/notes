@@ -1,0 +1,72 @@
+JS = Action that happens on Webpage!
+
+Primitive & The Console
+    Primitive Types - basic building blocks/data types that JS can interact with...
+        Basic Primitive types in JS = Number; String; Boolean; Null; Undefined
+        Numbers
+        - JS has only one number type - it includes positive, negative, whole and decimal numbers... (no floats like python...)
+        - Math operators builtin to JS = + - * /
+        Other ones: Modulo = % -- gives remainder of division
+                    Exponentiation - **
+
+WTF is NaN?
+    - NaN = Not a number. It is a numeric value that represents something that is not a number...
+    It is considered a number by JS, but it represents something that is not a number. 
+    Ex:
+    0/0 -- NaN
+    typeof NaN = "number"
+    typeof 0/0 = "NaN"
+
+Variables & let
+    - Variables are like labels for values. 
+        - We can store a value and give it a name so we can refer back to it later, use it to do stuff, or change it later to another value...
+        Basic syntax for declaring a vvariable:
+        let someName = value;
+        ex: let year = 1985;
+        you can then type the variable name into console and the value will be displayed. 
+        To update a value of a stored variable:
+        variable = newValue
+        When you update a variable to anew value, any other variables that were dependent on the previous value of it are unchanged.
+        ex:
+        numHens = 6
+        numRoosters = 1
+        totalChickens = numHens + numRoosters
+        totalChickens = 7
+        if you update numHens
+        numHens = 9
+        totalChickens is still = 7 - unless you redefine it...
+    
+    Updating Variables
+    let score = 0;
+    to add 5 to the score: score = score + 5; OR score += 5; 
+    increment by 1: score++;
+    subtract: score -= 5;
+    decriment by 1: score--;
+    multiplication: score *=2;
+    division: score /=5;
+
+Const & Var
+    Const
+    - Const works like let, except you cannot change the value. It is CONSTANT!
+    const luckyNum = 17;
+    Why use const?  - to store immutable values! 
+        ex: const pi = 3.14159;
+            const daysInWeek = 7;
+    Const becomes more useful once you learn about Arrays & Objects
+
+    Var
+    - Originally, this was the only way to declare variables. var is the OG.. but it's super geriatric now, so you might be better off leaving it or using it sparsely. 
+
+Booleans
+    Booleans easy - only two possible options: true OR false.
+    ex:
+    let isLoggedIn = true;
+    let gameOver = false;
+    const isWaterWet = true;
+    Booleans are really important for performing logic, making decisions, etc.
+
+Note: in JS, variables can change Types! They are not stuck in their predefined types...
+ex:
+let numKitties = 21;
+ numKitties = true;
+ numKitties - 100
