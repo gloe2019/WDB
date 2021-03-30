@@ -1,0 +1,106 @@
+- Boolean Logic is a key concept to understand in programming...
+- Decision making refers to having different outcomes based on different types of criteria --> different branching paths base don different inputs...
+
+Comparison Operators
+> // greater than
+< // less than
+>= // greater than or equal to
+<= // less than or equal to
+When these operators are used, they return a boolean value based on the values they are applied to:
+ 1 > 3 -> false..
+ 1 < 3 --> true...
+
+
+Double vs Triple Equality
+== // equality -- Just checks for equality of type and coerces them to be the same type i norder to compare them... ex 1 == '1' -> true!
+!= // not equal
+=== // strict equality --> Checks for equality of value AND type
+!== // strict non-equality
+Typically, use strict equality and non-equality to evaluate whether things are the same
+
+Console, Alert & Prompt
+
+console.log - print out something to the console
+
+alert () - Print out popup message to user
+
+prompt ("") - popup that takes user input.
+Normally, prompts are saved as variables in order to store user input...
+ex: let userNum = prompt("please enter a number)
+Note - to turn a string from userinput into a number:
+parseInt(variable-name)
+    ex: parseInt(userNum)
+
+===========================
+Running Code from a File
+    - Write code in a .js File
+    - Include .js script in your .html file
+
+
+===========================
+Conditionals
+    If Statement - only runs code if the given condition is true.
+        ex:
+        let rating = 3;
+        if (rating === 3) { -- NOTE: condition must evaluate to true or false
+            console.log("YOU ARE A SUPERSTAR!"); --> if TRUE, the code will execute..
+        }
+        If the conditional is false, ONLY the code inside the curly braces doesn't run. The rest of the code on the subsequent lines are still executed!
+
+    Else If Statement - if not the first thing, maybe try this other thing.
+        ex:
+        let rating = 2;
+        if (rating === 3) { 
+            console.log("YOU ARE A SUPERSTAR!");
+        }
+        else if (rating === 2) {
+            console.log("MEETS EXPECTATIONS");
+        }
+        NOTE: else if only runs if the first condition stated in the if statement is false!
+
+=============================
+Truthy Falsy
+    - Every element in JS has an inherent truthy-ness or falsy-ness to it.
+    - Everything in JS is 'truthy' except: false, 0, null, ""(empty string) and NaN
+
+
+=============================
+Logical Operators
+    - These are operators that allow us to combine different expressions - Combine multiple pieces of logic together into one.
+    - There are 3 core logical operators builtin to JavaScript:
+        - AND (&&)
+        - OR (||)
+        - NOT(!)
+    -------------------------
+    AND (&&)
+    - This joins an expression on the left to an expresison on the right.
+    - For the entire thing to be considered true, both side must be true!
+        ex:
+        1 <= 4 && 'a' === 'a'; //true
+        9 > 10 && 14 <= 19; //false as 9 < 10
+    --------------------------
+    OR (||)
+    - If one side is true, the entire thing is considered true!
+    ex:
+    let age = 76;
+    if (age < 6 || age >= 65){
+        console.log("You get in for free!");
+    }
+    else {
+        console.log("That will be $10 please!")
+    }
+    -------------------------
+    NOT (!)
+    - This doesn't combine two expressions, but operates on expression.
+    - !expression returns TRUE if the expression was ORIGINALLY false
+        !false //true
+        !(1 === 1) //false
+        !0 //true -- this flips the inherent falsyness of 0 to truthy
+        !null //true 
+
+    -------------------------
+    The SWITCH statement
+    - This is another control-flow statement that can replace multiple if statements.
+    Note: the switch statement is not commonly used, so it's not that important to memorize....
+    - For the switch statement to work, two key pieces must be present in your code -> 'switch' and 'case'
+        

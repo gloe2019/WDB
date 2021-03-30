@@ -59,7 +59,7 @@ String Methods with Arguments
     str.slice(5); //'califragilisticexpialidocious'
     slice - extracts/slices a portion of a string and returns it as a new string.
     - slice can accept one or two numbers. these numbers are the indices we want to slice our string from. they are referred to as the beginIndex and endIndex.
-        Syntax: str.slice(beginIndex[, endIndex]); -- src = https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+        Syntax: str.slice(beginInde[, endIndex]); -- src = https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
         note: the [] surrounding endIndex means it's optional and can be left out...
 
 String Template Literals
@@ -75,3 +75,24 @@ String Template Literals
     Redo w/ template literals:
     `You bought ${qty} ${product}s. Your Total is: ${price * qty}.` ==> "You bought 5 Artichokes. Your Total is: 11.25."
         Template literals allow you to embed variables directly inside of a string with minimal hassle!
+
+Random Numbers & The Math Object
+    - Math Object = a collection of methods and properties that have to do with math.
+    ex:
+        - Math.round() -- rounds a number
+        - Math.abs(x) -- Absolute value of x
+        - Math.pow(x,y) -- raises x to the yth power
+        - Math.floor() -- removes decimals from number without rounding
+        - Math.ceil() -- always rounds up number 
+
+    Generating Random mumbers
+        - Math.random() gives us a random decimal number between 0 and 1
+        - To generate random numbers between 1 and 10:
+            - const step1 = Math.random()
+            - const step2 = step1 * 10
+            - const step3 = Math.floor(step2)
+            - const step4 = step3 + 1;
+            or
+            Math.floor(Math.random() * 10) + 1 --> Generate numbers from 1 to 10
+            From 20 to 24:
+            Math.floor(Math.random()* 5) + 20;

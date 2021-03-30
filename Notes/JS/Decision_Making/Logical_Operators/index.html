@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Back...</a>
+        </nav>
+    </header>
+    <code class="code-snippet">
+        <h1>Example: Combining AND and OR Operators</h1><hr>
+// 0-5 = free, 5-10 = $10, 10- 65 = $20, 65+ = free <br>
+let age = 100; <br>
+if(age >= 0 && age < 5 || age >= 65){ //the AND evaluates first! before the OR... <br>
+    console.log("You get in FREE") <br>
+}<br>
+else if (age >= 5 && age < 10){ <br>
+    console.log("You pay $10!") <br>
+} <br>
+else if (age >= 10 && age < 65){ <br>
+    console.log("You pay $20!") <br>
+} <br>
+else { <br>
+    console.log("You must be a martian as your age is totes weird!") //Invalid Age catchall...<br>
+}</code> <br>
+
+<code class="code-snippet">
+    <h1>Example: Dealing with NOT</h1> <hr>
+let firstName = prompt("Please enter your first name:"); <br>
+if(!firstName){ <br>
+    firstName = prompt("Try again!"); // Note: this only runs once - learn how to loop this later... <br>
+} <br>
+else { <br>
+    alert(`Nice to meet you ${firstName}); <br>
+}
+</code>
+    <script src="script.js"></script>
+</body>
+</html>

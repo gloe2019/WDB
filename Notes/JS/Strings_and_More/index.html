@@ -22,14 +22,14 @@
         let userInput = "   hello, my name is tim tom tammy piing  ";
         /*alert(userInput.trim()); */
         let greeting = "      hello again!!!    "
-        let greetMod = greeting.trim().toUpperCase(); /* You can chain string methods! together*/
+        let greetMod = greeting.trim().toUpperCase(); /* You can chain string methods*/
         /* alert(greetMod); */
-
-        alert(msg.slice(0, 14) + "!!");
+        /* Slice + Chaining Methods
+        alert(msg.slice(0, 14) + "!!"); 
 
         let word = "skateboard"
         let facialHair = word.slice(5).replace('o', 'e');
-        alert(facialHair);
+        alert(facialHair);*/
 
         /*String Template Literals */
         let product = 'Artichoke';
@@ -38,7 +38,14 @@
         /* Create template literal and assign it to the variable - total */
         let total = `You bought ${qty} ${product}s. Your Total is: $${price * qty}.`
         alert(total);
+        /* Exercise */
+        // NO TOUCHING! (please)
+        const die1 = Math.floor(Math.random() * 6) + 1; //random number from 1-6
+        const die2 = Math.floor(Math.random() * 6) + 1; //random number from 1-6
 
+        // YOUR CODE BELOW THIS LINE:
+        let roll = `You rolled a ${die1} and a ${die2}. They sum up to ${die1 + die2}!`
+        alert(roll)
     </script>
 </body>
 

@@ -1,0 +1,18 @@
+.code-snippet {
+    display: block;
+    background: grey;
+    margin: 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+.code-snippet h1 {
+    margin: 10px 0;
+}
+.code-snippet hr{
+    width: 60%;
+    height: 2px;
+    border-width: 0;
+    color: white;
+    background-color: white;
+    margin: 10px 0;
+}
