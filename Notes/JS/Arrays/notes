@@ -105,4 +105,4 @@ Concat, indexOf, includes & reverse
     console.log(array3); // output -> Array ["a", "b", "c", "d", "e", "f"]
     ---------------------------
     Includes - determines whether an array included a certain value among its items - returns true OR false!
-    Syntax: arrayName.includes('arg') -- not the argument must match the full value of an item. 
+    Syntax: arrayName.includes('arg') -- note: the argument must match the full value of an item. 
