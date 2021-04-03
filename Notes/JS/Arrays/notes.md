@@ -109,7 +109,7 @@ const planets = ['The Moon','Venus', 'Earth', 'Mars', 'Jupiter']; //DO NOT TOUCH
 ```
 
 ------------------------------
-**Concat, indexOf, includes & reverse**
+### Concat, indexOf, includes & reverse
 - Concat - method used to merge multiple arrays together. It does not change existing arrays, but returns a new one.
     - Syntax: firstArray.concat(secondArray)
 ```javascript
@@ -143,7 +143,7 @@ comboParty = ['rusty', 'wyatt', 'blue', 'kitty']
 comboParty.reverse() // -> comboParty => ['kitty', 'blue', 'wyatt', 'rusty']
 ```
 ----
-**Slice, Splice & Sort**
+### Slice, Splice & Sort
 - Slice - method to return a portion/slice of an array. It returns ths portion ito a new array object, and the original is not affected.
     - Syntax: arrayName.slice([start[, end]]) --> can pass in 0, 1 or 2 numbers.
 ```javascript
