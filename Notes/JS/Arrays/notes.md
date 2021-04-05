@@ -195,3 +195,73 @@ The default sort order is ascending, based on the UTF-16 code unit values for ea
 let scores = [1, 70, 100, 2500, 9, -12, 0, 34]
 scores.sort() // -> [-12, 0, 1, 100, 2500, 34, 70, 9] - obviously not a useful numeric sort.
 ```
+----
+### Reference Types & Equality Testing
+- Observe how === behaves with an array:
+    ```javascript
+    ['hi', 'bye'] === ['hi', 'bye'] // -> *false*
+    [1] === [1] // -> *false*
+    [] === [] // -> *false*
+    ```
+- These arrays seem to be equal - they have the exacty same contents, however they are not considered equal. Why?
+- When comparing arrays using the equality operator, JavaScript does not compare their contents, but it compares their references in memory.
+- Arrays are stored with reference numbers, so every array has a unique reference number associated with it. Even if two array s have the exact same items, their reference numbers are different because they were declared separately. (think of it like inode numbers for files in Linux...)
+```javascript
+    let nums = [1,2,3];
+    let numsCopy = nums; // -> numsCopy is not a new array - both nums and numsCopy are referring to the same thing in memory. Hence they will be equal, and if you modify either of them, it will be reflected in both variables. 
+    numsCopy.push(4) // numsCopy = nums = [1. 2. 3. 4]
+    nums === numsCopy // -> true -- the reference is the same!
+```
+- Hence, you can't use '===' to compare array contents.
+
+----
+### Arrays + Const
+- You can use const to create arrays. When you use const, you're storing the reference. The values can change as long as the reference remains the same. Hence, you can still use array methods that alter the content of the array (like push & pop...)
+```javascript
+    const colors = ['red', 'orange', 'yellow'];
+    colors.push('green');
+    colors[4] = 'blue';
+    
+    colors = ['blue', 'pink', 'yellow']; //This will not work as this is a reassignment (it's trying to create an entirely new reference - a brand new array)
+```
+- Think of an array as the shell - it's contents (interior) can be changed, but the shell must stay the same.
+
+----
+### Multi-Dimensional Arrays
+- Arrays can store primitives AND other data structures
+    - We can store arrays inside other arrays! -- Nested Arrays!
+```javascript
+    const colours = [
+        ['red', 'crimson'],
+        ['orange', 'burnt orange'],
+        ['yellow', 'mustard'],
+        ['green', 'olive'],
+        ['blue', 'royal blue']
+        ['purple', 'orchid']
+    ]
+```
+- We can access values of nested arrays using the index method!
+```javascript
+    const gameBoard = [['X', 'O', 'X'], ['O', null, 'X'], ['O', 'O', 'X']]
+    gameBoard
+    (3) [Array(3), Array(3), Array(3)]
+        0: (3) ["X", "O", "X"]
+        1: (3) ["O", null, "X"]
+        2: (3) ["O", "O", "X"]
+    // To access 'null':
+    gameBoard[1][1] // -> null
+```
+
+### Practice:
+The array `airplaneSeats` represents the rows of seats on a flight. Hugo is lookin to book a seat - and fortunately, there is one seat available (currently set to null). Update the array by changing the element from null to Hugo!
+```javascript
+const airplaneSeats = [
+    ['Ruth', 'Anthony', 'Stevie'],
+    ['Amelia', 'Pedro', 'Maya'],
+    ['Xavier', 'Ananya', 'Luis'],
+    ['Luke', null, 'Deniz'],
+    ['Rin', 'Sakura', 'Francisco']
+];
+// YOUR CODE GOES BELOW THIS LINE
+airplaneSeats[3][1] = 'Hugo' 
+```
