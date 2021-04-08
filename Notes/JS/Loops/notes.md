@@ -155,7 +155,7 @@ for (let i = 0; i < bobsFollowers.length; i++) {
 console.log(mutualFollowers);
 ```
 
-> [!NOTE]
+> **NOTE**
 >
 > - Running console.log(mutualFollowers.push(tinasFollowers[j])) will not work as expected. This is due to how the push method actually works.
 > - JavaScript Array push() Method
