@@ -161,3 +161,216 @@ console.log(mutualFollowers);
 > - JavaScript Array push() Method
 >   - _Return Value: A Number, representing the **new length of the array**_
 > - When the loop gets a match, the value is pushed into the specified array, however the push method will return the new length of the array!
+
+---
+
+## While Loops
+
+- While loops continue running as long as the test condition is true.
+- Syntax:
+
+```javascript
+while (condition) statement;
+```
+
+- The statement in the loop stops executing once the condition becomes false.
+- Example:
+
+```javascript
+let num = 0;
+while (num < 10) {
+	console.log(num);
+	num++;
+}
+// While the condition - num < 10 is true, the current value of num will be printed, and then num will be incremented by 1.
+```
+
+- You need to pay attention to your code as it's much easier to create an infinite loop with while loops.
+- Code placement matters in a while loop as the code is executed from top-to-bottom.
+  - For example, if the code above was switched and the console.log statement came after the num++ statement, then the loop will print values from _1 to 10_ instead of _0 to 9_ as the number will be incremented before it was printed by console.log
+- While loops are not typically used in the situation above, where there is a defined number of iterations - in this case a for loop is more suitable.
+- While loops shine in cases where there is not a set number of iterations.
+  - Example:
+  ```javascript
+  const SECRET = "GlassEye";
+  let input = prompt("Please enter the secret phrase:");
+  while (input !== SECRET) {
+  	input = prompt("Please enter the secret phrase:");
+  }
+  console.log("You got it!");
+  ```
+
+### The **Break** Keyword
+
+- This is most commonly used with while loops. This is because with while loops, we don't have a set number of iterations, and break is useful in this case.
+- This stops the execution of the loop once the condition is met, and code below the loop is allowed to run.
+- Example:
+  ```javascript
+  let input = prompt("Write something plz");
+  while (true) {
+  	input = prompt(input);
+  	if (input.toLowerCase() === "stopeet") {
+  		break; // as soon as this is encountered, the loop stops running
+  	}
+  }
+  console.log("K, Fine");
+  ```
+
+### Guessing Game
+
+- Write a guessing game that takes input from the user and uses Math.random to generate a random number for the user to guess. The user should be given prompts like "Too high" or "too low" as they're guessing to get them closer to the number. This should run until the user guesses the right number.
+
+```javascript
+let maxNumber = parseInt(prompt("Enter your maximum number:"));
+while (!maxNumber) {
+	maxNumber = parseInt(prompt("Enter a valid number!"));
+} //User has to enter valid number before the rest of the code executes.
+
+const answer = Math.floor(Math.random() * maxNumber) + 1;
+// console.log(answer); //checkpoint
+
+let guess = parseInt(prompt("Guess the number"));
+let attempts = 1;
+
+while (parseInt(guess) !== answer) {
+	if (guess === "q") break;
+	attempts++;
+	if (guess < answer) {
+		guess = prompt("Too low, Guess again:");
+	} else {
+		guess = prompt("Too high, Guess again:");
+	}
+}
+if (guess === "q") {
+	console.log("You quit!😨💩");
+} else {
+	console.log("Congrats, You win!! ");
+	console.log(`That is correct! It took you ${attempts} tries.`);
+}
+```
+
+---
+
+## For...Of Loop
+
+- Useful for situations where you're iterating over arrays/objects when you don't really need the index. If the index is necessary, then you're better off using a for loop.
+- Example:
+
+```javascript
+const subreddits = [
+	"funny",
+	"news",
+	"nba",
+	"pics",
+	"books",
+	"ShowerThoughts",
+	"mildlyinteresting",
+	"aww",
+];
+for (let i = 0; i < subreddits.length; i++) {
+	console.log(`Visit reddit.com/r/${subreddits[i]}`);
+} //We can simplify this proces uing the for...of loop!
+```
+
+- Syntax:
+
+```
+for (variable of iterable) {
+	statement;
+}
+```
+
+- The variable represents the individual elements in the iterable - for example items in an array.
+
+```javascript
+for (let sub of subreddits) {
+	console.log(`Visit reddit.com/r/${sub}`);
+} // this prints out all the array items one by one...
+```
+
+- Let's revisit a previous example...
+
+```javascript
+const seatingChart = [
+  ['Kristoff', 'Piotr' 'Sandy'],
+  ['Malavika', 'Johnson', 'Xander', 'Bob'],
+  ['Sue', 'Thomas', 'Jack', 'Anderson']
+]
+for (let i = 0; i < seatingChart.length; i++){
+  const row = seatingChart[i];
+  for (let j = 0; j < row.length; j++);
+    console.log(row[j])
+}
+// Rewriting as a for...of loop:
+for (let row of seatingChart){
+  for (let student of row){
+    console.log(student)
+  }
+}
+```
+
+- For...of loops can be used with other iterable objects - like strings:
+
+```javascript
+for (let char of "hello world") {
+	console.log(char);
+}
+```
+
+---
+
+## Iterating Over Objects
+
+- Let's create an object literal:
+
+```javascript
+const testScores = {
+	keenan: 80,
+	damon: 67,
+	kim: 83,
+	nancy: 68,
+	chad: 49,
+	nadia: 89,
+	larry: 75,
+	dwyane: 53,
+};
+```
+
+- Object literals like the one above are not considered as iterable objects. To iterate over them, we can't use for...of loops.
+- We can use the for...in loop to iterate over object literals. For...in iterates over the key of object literals.
+
+```javascript
+for (let person in testScores) {
+	console.log(person); // this iterates over the key, so it displays the names only. To display the key and the value, just target the value using the key like so:
+	console.log(`${person} scored: ${testScores[person]}`);
+}
+```
+
+- We can also use the following special methods - Object.key(variableName), Object.values(variableName), Object.entries(variableName):
+
+```javascript
+Object.keys(testScores); //this prints out an Array with the keys of the object literal => ['keenan', 'damon', 'kim', 'nancy', 'chad',  'nadia', 'larry', 'dwyane']
+Object.values(testScores); // returns an Array with the values => [80, 67, 83, 68, 49, 89, 75, 53]
+Object.entries(testScores); // returns a nested array of key value pairs =>
+/*  
+[
+  [ 'keenan', 80 ],
+  [ 'damon', 67 ],
+  [ 'kim', 83 ],
+  [ 'nancy', 68 ],
+  [ 'chad', 49 ],
+  [ 'nadia', 89 ],
+  [ 'larry', 75 ],
+  [ 'dwyane', 53 ]
+] */
+```
+
+- You can use those methods to create arrays of the keys/values of the object literal, then use the for...of loop to iterate!
+- Ex:
+
+```javascript
+let total = 0;
+for (let score of Object.values(testScores)) {
+	console.log(score);
+}
+```
