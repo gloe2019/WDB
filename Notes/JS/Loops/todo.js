@@ -26,4 +26,5 @@ while (input !== "exit") {
 	}
 	input = prompt("Do something");
 }
-console.log("You've quit the App.");
+
+//console.log("You've quit the App.");
