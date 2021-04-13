@@ -32,7 +32,7 @@ function birdWatch() {
 birdWatch(); // => Scarlet Macaw. We still have access to variables defined outside a functon as they are global!
 ```
 
-#### Quiz
+#### **Quiz**
 
 ```javascript
 //What is printed to the console when this code runs?
@@ -62,9 +62,11 @@ handleAnimal(); // => "Scorpionfish
 console.log(deadlyAnimal); // => "Blue-Ringed Octopus"
 ```
 
+---
+
 ## Block Scope
 
-- A block refers to anything written within curly braces {} -- includes functions AND conditionals AND loops...
+- A block refers to anything written within curly braces {} -- includes functions, conditionals AND loops...
 - Variables created with the `let` or `const` keywords are block scoped - They only exist within the block!
 
 ```javascript
@@ -93,3 +95,26 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(msg); // => "ASDASJDKHA"; -- msg is NOT block scoped because it was created with the var keyword!
 ```
+
+---
+
+## Lexical Scope
+
+- Inner functions nested inside parent functions have access to variables defined in their parent functions.
+- Nested functions have acces to variables defined in their parent functions, however this is not reflected in the reverse scenario -- parent functions do not have access to variables defined in inner/nested functions.
+
+```javascript
+function bankRobbery() {
+	const heroes = ["Black Panther", "Spiderman", "Superman", "Wolverine"];
+	function cryForHelp() {
+		for (let hero of heroes) {
+			console.log(`PLEASE HELP US, ${hero.toUpperCase()}`);
+		}
+	}
+	cryForHelp(); // calling this function here allows the loop to be executed once the bankRobbery function is called.
+}
+```
+
+---
+
+## Function Expressions
