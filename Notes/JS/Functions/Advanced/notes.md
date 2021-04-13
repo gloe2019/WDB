@@ -203,6 +203,8 @@ const isAdult = makeBetweenFunc(19, 64);
 const isSenior = makeBetweenFunc(65, 120);
 ```
 
+---
+
 ## Defining Methods
 
 - We've encountered some methods previously:
@@ -240,4 +242,68 @@ const myMath = {
 		return num ** 3;
 	},
 };
+```
+
+---
+
+## The `this` Keyword
+
+- `this` is an important keyword in Javascript.
+- It is typically used to access properties (methods) on an object
+
+```javascript
+// we can use `this` to access the properties of the cat object...
+const cat = {
+	name: "Blue Steele",
+	color: "grey",
+	breed: "Scottish fold",
+	meow() {
+		console.log(`${this.name} says MEOWWW!`); // `this` refers to the object
+	},
+};
+cat.meow(); // => 'Blue Steele says MEOWWW!'
+```
+
+> NOTE:
+>
+> - The value of `this` can change!
+>   It depends on the invocation context of the function it is used in - in simpler terms, how we actually call the function determines the value of `this`
+
+```javascript
+const meow2 = cat.meow;
+meow2(); // => ' says MEOWWW! -- in this context, 'this' no longer refers to the cat object, but the top-level object - window! Since an object is not direcly stated, the window object is default as window is the object which contains every other object...
+```
+
+---
+
+## Using Try/Catch
+
+- Try/Catch statements are used for catching errors and preventing them from stopping code execution
+
+```javascript
+hello.toUpperCase(); // => **Uncaught** Reference Error: hello is not defined.
+```
+
+- If you anticipate that your code might cause an error, wrap it in a try {} block and include a catch statement (code to run if an error is actually generated)
+
+```javascript
+try {
+	hello.toUpperCase();
+} catch {
+	console.log("ERROR!!");
+}
+
+console.log("AFTER"); //This will actually run after the try/catch block.
+```
+
+- Without the try/catch statements, any errors encountered in the code will immediately halt code execution!
+
+```javascript
+function yell(msg) {
+    try {
+	console.log(msg.toUpperCase().repeat(3));
+    } catch (e) {
+        console.log(e);
+        console.log("Please pass a string!")
+    }
 ```
