@@ -78,6 +78,7 @@ movies.forEach(function (movie) {
 ## The map Method
 
 - Map accepts a callback function and runs it once per element in the array. It then generates a new array using the results of the callback. It's used to map an array from one state to another.
+- Typically used when we want to transform a portion of some data in an array and create a new array.
 
 ```javascript
 const texts = ["rofl", "lol", "omg", "ttyl"];
