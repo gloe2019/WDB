@@ -118,3 +118,18 @@ function bankRobbery() {
 ---
 
 ## Function Expressions
+
+- We've learned how to define functions using _function statements:_
+  ```javascript
+  function add(x, y) {
+  	return x + y;
+  }
+  ```
+- There's another way to define a function - by storing the function in a variable. This is a function expression:
+  ```javascript
+  const add = function (x, y) {
+  	// this expression creates the function and stores it in the variable named `add`
+  	return x + y;
+  };
+  //To call the function, we use the name of the variable, since we don't actually name the function.
+  ```
