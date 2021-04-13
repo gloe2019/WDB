@@ -200,5 +200,44 @@ isChild(7); // => true
 
 const isAdult = makeBetweenFunc(19, 64);
 
-cons isSenior = makeBetweenFunc(65, 120);
+const isSenior = makeBetweenFunc(65, 120);
+```
+
+## Defining Methods
+
+- We've encountered some methods previously:
+  - `toUpperCase()` -- convert string to uppercase
+  - `push()` -- add values to the end of an array
+  - `indexOf()` -- return the array item stored at the provided index
+- A method is a function that has been placed as a property on an Object.
+- Every method is a function, however not all functions are methods!
+- We can add functions as properties on objects!
+
+```javascript
+const myMath = {
+	PI: 3.14159,
+	square: function (num) {
+		return num * num;
+	},
+	cube: function (num) {
+		return num ** 3;
+	},
+};
+
+myMath.cube(3); // => 27
+```
+
+- There is a new shorthand way of adding methods in JS:
+
+```javascript
+const myMath = {
+	PI: 3.14159,
+	square(num) {
+		//**You don't need the function keyword!!**
+		return num * num;
+	},
+	cube(num) {
+		return num ** 3;
+	},
+};
 ```
