@@ -126,6 +126,7 @@ function bankRobbery() {
   }
   ```
 - There's another way to define a function - by storing the function in a variable. This is a function expression:
+- JavaScript treats functions as values that can be stored in variables
   ```javascript
   const add = function (x, y) {
   	// this expression creates the function and stores it in the variable named `add`
@@ -133,3 +134,71 @@ function bankRobbery() {
   };
   //To call the function, we use the name of the variable, since we don't actually name the function.
   ```
+
+---
+
+## Higher Order Functions
+
+- Higher order functions operate on/with other functions.
+- They can:
+  - Accept other functions as arguments.
+  - Return a function
+
+### Accepting a Function as an Argument
+
+```javascript
+//We can pass a function as an argument into another function!
+function rollDie() {
+	const roll = Math.floor(Math.random() * 6) + 1;
+	console.log(roll);
+}
+
+function callSixTimes(func) {
+	for (let i = 0; i < 6; i++) {
+		func();
+	}
+}
+
+callSixTimes(rollDie); // Don't include the parenthesis when passing in a function as an argument, or the function will immediately execute, return a number value and invalidate the statement as callSixTimes is expecting a function and not a numerical value!
+```
+
+### Returning a Function
+
+```javascript
+function makeMysteryFunc() {
+	const rand = Math.random();
+	if (rand > 0.5) {
+		return function () {
+			console.log("I AM A GOOD FUNCTION!");
+            console.log("You Win a Million Dollars!!😄🎊🎇🎊)
+		};
+	} else {
+		return function () {
+            alert ("YOU HAVE BEEN INFECTED WITH A COMPUTER VIRUS!")
+            alert ("STOP TRYING TO CLOSE THIS WINDOW!")
+            alert ("STOP TRYING TO CLOSE THIS WINDOW!")
+            alert ("STOP TRYING TO CLOSE THIS WINDOW!")
+            alert ("STOP TRYING TO CLOSE THIS WINDOW!")
+        };
+	}
+}
+```
+
+```javascript
+function makeBetweenFunc(min, max) {
+	return function (num) {
+		return num >= min && num <= max;
+	};
+} //This allows us to make a factory function that create distinct functions based on the parameters provided...
+
+makeBetweenFunc(5, 10); // function should test whether or not there is a number between 5 and 10...
+//You can capture the returned function in a variable!
+//Ex:
+const isChild = makeBetweenFunc(0, 18);
+isChild(40); // => false
+isChild(7); // => true
+
+const isAdult = makeBetweenFunc(19, 64);
+
+cons isSenior = makeBetweenFunc(65, 120);
+```
